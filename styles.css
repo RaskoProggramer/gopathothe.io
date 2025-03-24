@@ -1,0 +1,132 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: #003366;
+    background-image: url('image/GOPATHOTHE\ PTY\ LTD.png');
+    background-size: 600px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    opacity: 0.9;
+}
+
+.grid {
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    width: 100%;
+    background-color: #f0f0f0;
+    padding: 20px 0;
+}
+
+.scroll-container {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+}
+
+.scroll-content {
+    display: flex;
+    gap: 20px;
+    animation: scroll-left 10s linear infinite alternate;
+}
+
+.service {
+    min-width: 300px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    border: 3px solid #008000;
+}
+
+.service img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+@keyframes scroll-left {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-70%); }
+}
+
+#contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+.address, .contact-form {
+    width: 45%;
+}
+
+.showcase {
+    width: 10%;
+    text-align: center;
+    font-weight: bold;
+    color: #008000;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #003366;
+    color: white;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    justify-content: space-around;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #003366;
+    color: white;
+}
+
+textarea {
+    height: 150px;
+    width: 100%;
+}
+
+#about {
+    text-align: center;
+    padding: 40px;
+    background-color: #f8f8f8;
+}
+
+#about h1, #about h2 {
+    color: #008000;
+}
+
+.about-logo img{
+    width: 200px;
+    height: auto;
+}
+
+.contact h3{
+    color: black;
+}
