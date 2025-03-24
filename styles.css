@@ -8,6 +8,7 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     opacity: 0.9;
+    padding: 0;
 }
 
 .grid {
@@ -50,11 +51,12 @@ body {
 
 @keyframes scroll-left {
     0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
+    100% { transform: translateX(-80%); }
 }
 
 #contact {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
@@ -62,11 +64,15 @@ body {
 }
 
 .address, .contact-form {
-    width: 45%;
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+    text-align: center;
+
 }
 
 .showcase {
-    width: 10%;
+    width: 100%;
     text-align: center;
     font-weight: bold;
     color: #008000;
@@ -79,6 +85,15 @@ header {
     padding: 20px;
     background-color: #003366;
     color: white;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    justify-content: space-around;
 }
 
 nav ul {
@@ -129,4 +144,18 @@ textarea {
 
 .contact h3{
     color: black;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+    nav ul {
+        flex-direction: column;
+        padding: 10px;
+    }
+    .scroll-content {
+        animation: scroll-left 15s linear infinite alternate;
+    }
 }
