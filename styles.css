@@ -159,3 +159,17 @@ textarea {
         animation: scroll-left 15s linear infinite alternate;
     }
 }
+
+footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+    line-height: 1.6;
+}
+
+footer p {
+    margin: 5px 0;
+}
+  
