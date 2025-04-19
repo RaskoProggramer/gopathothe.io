@@ -20,17 +20,41 @@ body {
     padding: 20px 0;
 }
 
-.scroll-container {
-    display: flex;
-    width: 100%;
-    overflow: hidden;
-}
-
 .scroll-content {
     display: flex;
     gap: 20px;
-    animation: scroll-left 10s linear infinite alternate;
+    animation: scroll-left 30s linear infinite;
 }
+
+.scroll-container:hover .scroll-content {
+    animation-play-state: paused;
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+
+.scroll-container::-webkit-scrollbar {
+    height: 10px;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+    background-color: #008000;
+    border-radius: 10px;
+}
+
+.scroll-content {
+    display: inline-flex;
+    gap: 20px;
+    transition: transform 0.5s ease-in-out;
+}
+
 
 .service {
     min-width: 300px;
@@ -47,11 +71,6 @@ body {
     height: 200px;
     object-fit: cover;
     border-radius: 5px;
-}
-
-@keyframes scroll-left {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
 }
 
 #contact {
@@ -133,8 +152,9 @@ textarea {
     background-color: #f8f8f8;
 }
 
-#about h1, #about h2 {
+#about h1, #about h2, #about p {
     color: #008000;
+    text-align: center;
 }
 
 .about-logo img{
