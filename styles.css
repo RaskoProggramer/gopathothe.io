@@ -14,7 +14,7 @@ body {
 .grid {
     overflow: hidden;
     white-space: nowrap;
-    position: relative;
+    /* position: relative; */
     width: 100%;
     background-color: #f0f0f0;
     padding: 20px 0;
@@ -80,6 +80,11 @@ body {
     align-items: center;
     padding: 20px;
     background-color: #f0f0f0;
+
+}
+
+.contactForm{
+    text-align: center;
 }
 
 .address, .contact-form {
@@ -96,6 +101,66 @@ body {
     font-weight: bold;
     color: #008000;
 }
+
+#contact-form {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+}
+
+.contactForm {
+    width: 100%;
+    max-width: 600px;
+    background: white;
+    padding: 30px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+}
+
+.contactForm h2 {
+    text-align: center;
+    color: #008000;
+    margin-bottom: 25px;
+}
+
+.contactForm form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contactForm input,
+.contactForm select,
+.contactForm textarea {
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.contactForm textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+#submit {
+    background-color: #008000;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#submit:hover {
+    background-color: #006400;
+}
+
 
 header {
     display: flex;
@@ -115,15 +180,6 @@ nav ul {
     justify-content: space-around;
 }
 
-nav ul {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    justify-content: space-around;
-}
-
 nav ul li {
     display: inline;
 }
@@ -131,6 +187,11 @@ nav ul li {
 nav ul li a {
     color: white;
     text-decoration: none;
+    font-weight: bold;
+    padding: 5px;
+}
+
+.logo{
     font-weight: bold;
 }
 
@@ -143,7 +204,7 @@ footer {
 
 textarea {
     height: 150px;
-    width: 100%;
+    width: 50%;
 }
 
 #about {
@@ -192,4 +253,4 @@ footer {
 footer p {
     margin: 5px 0;
 }
-  
+
