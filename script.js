@@ -85,3 +85,19 @@ function getBotResponse(input) {
 
     return "I'm not sure about that. You can ask me about our services like construction, plumbing, roofing, or safety.";
 }
+
+// Reveal elements on scroll
+window.addEventListener("scroll", reveal);
+
+function reveal() {
+  let elements = document.querySelectorAll(".reveal");
+  for (let i = 0; i < elements.length; i++) {
+    let windowHeight = window.innerHeight;
+    let elementTop = elements[i].getBoundingClientRect().top;
+    let elementVisible = 100;
+
+    if (elementTop < windowHeight - elementVisible) {
+      elements[i].classList.add("active");
+    }
+  }
+}
