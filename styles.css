@@ -392,3 +392,35 @@ footer p {
     50% { border-color: transparent }
   }
   
+  /* Default (desktop) */
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: white;
+  }
+  
+  /* Mobile styles */
+  @media (max-width: 768px) {
+    nav ul {
+      display: none; /* hide nav by default */
+      flex-direction: column;
+      width: 100%;
+      background: #003366;
+      text-align: center;
+      padding: 10px 0;
+    }
+  
+    nav ul li {
+      margin: 10px 0;
+    }
+  
+    .menu-toggle {
+      display: block;
+    }
+  
+    nav ul.active {
+      display: flex; /* show when active */
+    }
+  }
+  
