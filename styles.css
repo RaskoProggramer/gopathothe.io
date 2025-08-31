@@ -1,121 +1,161 @@
+/* ---------- GLOBAL ---------- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: white;
-    color: #003366;
-    background-image: url('image/GOPATHOTHE\ PTY\ LTD.png');
-    background-size: 400px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    opacity: 0.9;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
     padding: 0;
+    color: #333;
+    background-color: #fff;
+    line-height: 1.6;
 }
 
-.grid {
-    overflow: hidden;
-    white-space: nowrap;
-    /* position: relative; */
-    width: 100%;
-    background-color: #f0f0f0;
-    padding: 20px 0;
-}
-
-.scroll-content {
+/* ---------- HEADER ---------- */
+header {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: #003366;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
     gap: 20px;
-    animation: scroll-left 30s linear infinite;
 }
 
-.scroll-container:hover .scroll-content {
-    animation-play-state: paused;
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
 }
 
-@keyframes scroll-left {
-    0% {
-        transform: translateX(0%);
-    }
-    100% {
-        transform: translateX(-50%);
-    }
+nav ul li a:hover {
+    color: #008000;
 }
 
-
-.scroll-container::-webkit-scrollbar {
-    height: 10px;
+/* ---------- HERO / ABOUT ---------- */
+#about {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #f8f8f8;
 }
 
-.scroll-container::-webkit-scrollbar-thumb {
-    background-color: #008000;
-    border-radius: 10px;
+#about h1, #about h2 {
+    color: #003366;
+    margin-bottom: 15px;
 }
 
-.scroll-content {
-    display: inline-flex;
-    gap: 20px;
-    transition: transform 0.5s ease-in-out;
+#about p {
+    color: #333;
+    margin-bottom: 10px;
 }
 
+.about-logo img {
+    width: 180px;
+    margin-bottom: 20px;
+}
+
+/* ---------- SERVICES ---------- */
+#services, #Safety {
+    padding: 60px 20px;
+    background-color: #fff;
+}
+
+.services-grid, .safety-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
 
 .service {
-    min-width: 300px;
     background-color: white;
-    padding: 10px;
-    border-radius: 10px;
+    border-radius: 12px;
     text-align: center;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-    border: 3px solid #008000;
+    padding: 15px;
+    border: 2px solid #008000;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
 }
 
 .service img {
     width: 100%;
-    height: 200px;
+    height: 180px;
     object-fit: cover;
-    border-radius: 5px;
+    border-radius: 8px;
+    margin-bottom: 10px;
 }
 
+.service p {
+    font-weight: 600;
+    color: #003366;
+}
+
+/* ---------- CONTACT ---------- */
 #contact {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
+    justify-content: center;
+    gap: 40px;
+    padding: 60px 20px;
     background-color: #f0f0f0;
-
-}
-
-.contactForm{
     text-align: center;
 }
 
-.address, .contact-form {
-    width: 100%;
+.address {
     max-width: 400px;
-    margin: auto;
-    text-align: center;
-
 }
 
-.showcase {
-    width: 100%;
-    text-align: center;
-    font-weight: bold;
+.address h2 {
     color: #008000;
 }
 
+.address h3 {
+    color: #003366;
+    margin-bottom: 5px;
+}
+
+.showcase {
+    font-weight: bold;
+    color: #008000;
+    margin-top: 20px;
+}
+
+/* ---------- CONTACT FORM ---------- */
 #contact-form {
     display: flex;
     justify-content: center;
-    padding: 40px 20px;
-    background-color: #f9f9f9;
+    padding: 60px 20px;
+    background-color: #fafafa;
 }
 
 .contactForm {
     width: 100%;
     max-width: 600px;
     background: white;
-    padding: 30px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    border-radius: 10px;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
 }
 
 .contactForm h2 {
@@ -127,13 +167,13 @@ body {
 .contactForm form {
     display: flex;
     flex-direction: column;
+    gap: 15px;
 }
 
 .contactForm input,
 .contactForm select,
 .contactForm textarea {
     padding: 12px 15px;
-    margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 6px;
     font-size: 16px;
@@ -149,10 +189,11 @@ body {
 #submit {
     background-color: #008000;
     color: white;
-    padding: 12px;
+    padding: 14px;
     border: none;
     border-radius: 6px;
     font-size: 16px;
+    font-weight: 600;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
@@ -161,91 +202,12 @@ body {
     background-color: #006400;
 }
 
-
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
+/* ---------- FOOTER ---------- */
+footer {
     background-color: #003366;
     color: white;
-}
-
-nav ul {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    justify-content: space-around;
-}
-
-nav ul li {
-    display: inline;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 5px;
-}
-
-.logo{
-    font-weight: bold;
-}
-
-footer {
     text-align: center;
-    padding: 20px;
-    background-color: #003366;
-    color: white;
-}
-
-textarea {
-    height: 150px;
-    width: 50%;
-}
-
-#about {
-    text-align: center;
-    padding: 40px;
-    background-color: #f8f8f8;
-}
-
-#about h1, #about h2, #about p {
-    color: #008000;
-    text-align: center;
-}
-
-.about-logo img{
-    width: 200px;
-    height: auto;
-}
-
-.contact h3{
-    color: black;
-}
-
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        text-align: center;
-    }
-    nav ul {
-        flex-direction: column;
-        padding: 10px;
-    }
-    .scroll-content {
-        animation: scroll-left 15s linear infinite alternate;
-    }
-}
-
-footer {
-    background-color: #222;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
+    padding: 25px;
     font-size: 0.9em;
     line-height: 1.6;
 }
@@ -254,3 +216,97 @@ footer p {
     margin: 5px 0;
 }
 
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    #contact {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+/* Chatbot container */
+#chatbot {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 300px;
+    max-height: 400px;
+    background: white;
+    border: 2px solid #003366;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    display: none;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+    z-index: 1000;
+  }
+  
+  /* Header */
+  #chat-header {
+    background: #003366;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  /* Body */
+  #chat-body {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    font-size: 14px;
+  }
+  
+  /* Input */
+  #chat-input {
+    display: flex;
+    border-top: 1px solid #ddd;
+  }
+  #chat-input input {
+    flex: 1;
+    border: none;
+    padding: 10px;
+    font-size: 14px;
+  }
+  #chat-input button {
+    background: #008000;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    cursor: pointer;
+  }
+  #chat-input button:hover {
+    background: #006400;
+  }
+  
+  /* Floating button */
+  #chat-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #008000;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    font-size: 22px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    z-index: 1000;
+  }
+  

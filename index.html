@@ -100,7 +100,18 @@
         <p>Registration: 2017/537200/07</p>
         <p>SARS: 9213172233</p>
     </footer>
-    
+    <div id="chatbot">
+        <div id="chat-header">Chat with Us</div>
+        <div id="chat-body"></div>
+        <div id="chat-input">
+          <input type="text" id="user-input" placeholder="Ask about our services...">
+          <button onclick="sendMessage()">Send</button>
+        </div>
+      </div>
+      
+      <!-- Floating Button -->
+      <button id="chat-toggle">💬</button>
+      
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script src="script.js"></script>
 </body>
