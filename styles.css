@@ -368,6 +368,75 @@ footer p {
   #chat-toggle {
     animation: bounce 2s infinite;
   }
+
+  /* Chatbot container (hidden by default) */
+#chatbot {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 300px;
+    height: 400px;
+    background: #fff;
+    border: 2px solid #008000;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transform: scale(0.9);
+    pointer-events: none;
+    transition: all 0.3s ease-in-out;
+    z-index: 1000;
+  }
+  
+  /* Show state */
+  #chatbot.show {
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: auto;
+  }
+  
+  /* Chat header */
+  #chatbot-header {
+    background: #008000;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  
+  /* Chat body */
+  #chat-body {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    font-size: 14px;
+  }
+  
+  /* Chat input */
+  #chat-input {
+    display: flex;
+    border-top: 1px solid #ccc;
+  }
+  #chat-input input {
+    flex: 1;
+    border: none;
+    padding: 8px;
+    outline: none;
+  }
+  #chat-input button {
+    background: #008000;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+  }
+  #chat-input button:hover {
+    background: #006400;
+  }
+  
   
   @keyframes bounce {
     0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
